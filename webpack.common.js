@@ -1,7 +1,7 @@
 /**
  * Created by Maggie on 11/17 2017
  */
-
+//https://segmentfault.com/a/1190000005969643
 const path = require('path');
 const glob = require('glob');
 const fs = require('fs');
@@ -13,7 +13,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         main: path.join(__dirname, './src/main.js'),
-        vendors: ['react', 'react-dom', 'lodash']
+        vendors: ['react', 'React-dom', 'lodash']
     },
     output:{
         path: path.resolve(__dirname, "./build/"),
@@ -28,11 +28,6 @@ module.exports = {
             components: path.resolve(__dirname, 'components') 
         }
     },
-    externals:[{
-        "react": "React",
-        "react-dom": "ReactDOM",
-        "lodash": "lodash"
-    }],
     module:{
         loaders:[
             {
@@ -72,7 +67,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+        new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendors.bundle.js' }),
         new ExtractTextPlugin("style.css"),
         new webpack.BannerPlugin('This is a SD System for Test !'), //插件用于给文件头部加注释信息
         new HtmlWebpackPlugin({

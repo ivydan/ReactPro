@@ -1,7 +1,7 @@
 {
-  "name": "webPage",
+  "name": "ReactPro",
   "version": "1.0.0",
-  "description": "Test webPage",
+  "description": "ReactPro",
   "main": "index.js",
   "dependencies": {
     "fdcomponent": "^0.1.13",
