@@ -1,0 +1,90 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.fd-title{
+	margin-left: 60px;
+}
+
+
+.fd-flow{
+	width: 100px;
+    height: 180px;
+    background-color: #ddd3fa;
+    position: fixed;
+    left: 15px;
+    top: 40%;
+    animation: flow 3s infinite;
+    border-radius: 15px;
+}
+
+@keyframes flow{
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(20px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+
+.fd-flow .flow-comm{
+	background-color: #eee;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 50px;
+	transition: all 1s;
+	color: #000;
+}
+
+.fd-flow .flow-comm:hover{
+	font-size: 25px;
+	line-height: 45px;
+	transform: rotateZ(360deg);
+	animation-play-state:paused;
+}
+
+.fd-flow .flow-c{
+	top: 10px;
+	left: 20px;
+	animation: flow-c 2s infinite;
+}
+.fd-flow .flow-a{
+	top: 66px;
+	left: 40px;
+	animation: flow-a 2s infinite;
+}
+.fd-flow .flow-x{
+	top: 120px;
+	left: 20px;
+	animation: flow-c 2s infinite;
+}
+
+@keyframes flow-c{
+	0%{
+		transform: translateX(0px);
+	}
+	50%{
+		transform: translateX(15px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+@keyframes flow-a{
+	0%{
+		transform: translateX(0px);
+	}
+	50%{
+		transform: translateX(-30px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
