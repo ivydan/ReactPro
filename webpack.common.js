@@ -67,13 +67,16 @@ module.exports = {
         ],
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendors.bundle.js' }),
+        new webpack.optimize.CommonsChunkPlugin({ 
+            name: "vendors",
+            filename: "vendors.bundle.js",
+            minChunks: Infinity, 
+        }),
         new ExtractTextPlugin("style.css"),
         new webpack.BannerPlugin('This is a SD System for Test !'), //插件用于给文件头部加注释信息
         new HtmlWebpackPlugin({
             title: `React Project`,
-            filename: `index.html`,
-            template: path.join(__dirname, 'index.html')
+            filename: `index.html`
         })
     ]
 }

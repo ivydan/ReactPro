@@ -42,7 +42,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --hot",
     "start": "webpack-dev-server --history-api-fallback --progress --colors --config webpack.dev.js",
-    "build": "webpack --progress --colors --config webpack.prod.js"
+    "build": "webpack --progress --colors --config webpack.prod.js",
+    "builddll": "webpack --progress --colors --config webpack.dllconfig.js",
+    "startdll": "webpack-dev-server --history-api-fallback --progress --colors --config webpack.dll.js"
   },
   "author": "Maggie",
   "license": "ISC"
